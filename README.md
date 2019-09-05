@@ -71,7 +71,7 @@ Default value: `'#7c7c7c'`
 
 ## 2. Start spying
 You're all set to start spying on someone's connection ! :eyes:
-Go to the home page and start now ! :eyes:
+Go to the home page and start now ! :clap:
 
 
 # Supported OS
@@ -80,4 +80,4 @@ Go to the home page and start now ! :eyes:
 * **Linux** : Ubuntu 12.04, Fedora 21, Debian 8 and more.
 
 # Issues found ?
-If something doesn't work or behave as you expected, let us know by reporting a new issue on [github.com/d-roduit/whatsappspy](https://github.com/droduit/whatsappspy).
+If something doesn't work or behave as you expected, let us know by reporting a new issue on [github.com/d-roduit/whatsappspy](https://github.com/droduit/whatsappspy/issues).
