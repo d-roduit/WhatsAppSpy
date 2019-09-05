@@ -1,0 +1,259 @@
+/*------------------------------------------------------------------
+>>> TABLE OF CONTENTS
+--------------------------------------------------------------------
+1.0 - SCSS Variables
+2.0 - Screenshot settings
+3.0 - Normal settings
+4.0 - Advanced settings
+5.0 - Save & reset buttons
+6.0 - Common properties
+
+*/
+
+
+
+/*------------------------------------------------------------------
+1.0 - SCSS Variables
+------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+2.0 - Screenshot settings
+------------------------------------------------------------------*/
+#screenshotSettings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    #settingsSide {
+        input {
+            width: 40px;
+            text-align: center;
+        }
+
+        button#checkScreenshotConfig {
+            margin-left: 15px;
+        }
+
+        p#checkScreenshotConfigDescription {
+            margin: 10px 0px 0px 15px;
+            color: grey;
+            font-size: 14px;
+            text-align: justify;
+        }
+    }
+
+    #imgCheckSide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 50px;
+
+        #imgCheckContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-width: 120px;
+            width: 80%;
+            max-width: 400px;
+            height: 50%;
+            border: 1px dashed grey;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+/*------------------------------------------------------------------
+3.0 - Normal settings
+------------------------------------------------------------------*/
+#normalSettings {
+    input#dataDirectory {
+        width: 80%;
+        max-width: 700px;
+    }
+
+    button#browseDirectories {
+        margin-left: 10px;
+
+        @media (max-width: 524px) {
+            margin-left: 0px;
+            margin-top: 15px;
+        }
+    }
+
+    p#errIsNotDirectory {
+        margin-top: 5px;
+        color: rgb(255, 109, 126);
+        font-size: 14px;
+    }
+
+    #resetLogFileEntry {
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+/* Switch Buttons style */
+.switch {
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider {
+            background-color: rgb(104, 180, 99);
+        }
+
+        &:focus + .slider {
+            box-shadow: 0 0 1px rgb(104, 180, 99);
+        }
+
+        &:checked + .slider:before {
+            transform: translateX(20px);
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: grey;
+        -webkit-transition: .4s;
+        transition: .4s;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        /* Rounded sliders */
+        &.round {
+            border-radius: 34px;
+
+            &:before {
+            border-radius: 50%;
+            }
+        }
+    }
+}
+/* End Switch Buttons style */
+
+/*------------------------------------------------------------------
+4.0 - Advanced settings
+------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+5.0 - Save & reset buttons
+------------------------------------------------------------------*/
+#buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @media (max-width: 504px) {
+        justify-content: space-between
+    }
+
+    button {
+        &#saveConfig {
+            background-color: #7289da;
+            color: white;
+            font-weight: lighter;
+        }
+
+        &#resetConfig {
+            background-color: rgba(255,255,255,0.5);
+            color: black;
+
+            @media (max-width: 504px) {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.primaryButtons,
+.secondaryButtons {
+    border-radius: 3px;
+}
+
+.primaryButtons {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: translateY(1.5px);
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+    }
+}
+
+.secondaryButtons {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: rgba(255, 237, 114, 0.8);
+    color: black;
+}
+
+
+/*------------------------------------------------------------------
+6.0 - Common properties
+------------------------------------------------------------------*/
+.settingsGroup {
+    margin-bottom: 30px;
+
+    label {
+        color: white;
+    }
+
+    input:not([type='color']) {
+        margin-top: 5px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid grey;
+        background: none;
+        padding: 5px 0px;
+        font-size: 15px;
+        color: rgb(255, 237, 114);
+    }
+
+    .entryGroup {
+        margin: 0px 0px 20px 15px;
+
+        span.comment {
+            color: grey;
+            font-size: 13px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.disappear {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+.none {
+    display: none;
+}

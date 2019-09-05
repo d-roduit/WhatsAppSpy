@@ -1,0 +1,288 @@
+/*------------------------------------------------------------------
+>>> TABLE OF CONTENTS
+--------------------------------------------------------------------
+1.0 - SCSS Variables
+2.0 - General Behaviour
+3.0 - Icon
+4.0 - Title Bar
+5.0 - Window Menu
+6.0 - Navigation Menu
+7.0 - Dynamic Content
+
+*/
+
+
+
+/*------------------------------------------------------------------
+1.0 - SCSS Variables
+------------------------------------------------------------------*/
+/* Mixins */
+@mixin flex-center-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid */
+$column_1: 60px;
+$column_2: auto;
+$column_3: 120px;
+$row_1: 40px;
+$row_2: auto;
+
+/* Background Colors */
+$headerBar_bgColor: rgb(28, 37, 40);
+$body_bgColor: rgb(39, 49, 54);
+$windowMenuItems_hoverBgColor: rgb(52, 59, 62);
+$navigationMenu_bgColor: rgb(22, 27, 30);
+
+/* Text Colors */
+
+$head1_textColor: rgb(211, 212, 212);
+$head2_textColor: rgb(255, 178, 112);
+$head3_textColor: rgb(255, 237, 114);
+$p1_textColor: white;
+$p2_textColor: grey;
+$p2_hover_textColor: rgb(184, 196, 195);
+/*------------------------------------------------------------------
+2.0 - General Behaviour
+------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important;
+    font-family: sans-serif;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #666;
+    }
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "iconContainer statusBar windowButtons"
+    "nav main main";
+
+    grid-template-columns: $column_1 $column_2 $column_3;
+    grid-template-rows: $row_1 $row_2;
+
+    height: 100vh;
+    background-color: $body_bgColor;
+}
+
+h1 {
+    color: $head1_textColor;
+    text-align: center;
+
+    grid-area: pageTitle;
+}
+
+h2 {
+    color: $head2_textColor;
+    margin: 20px 0px 10px 0px;
+}
+
+h3 {
+    color: $head3_textColor;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+h3:not(:first-of-type) {
+    margin-top: 15px;
+}
+
+h4  {
+    color: $p1_textColor;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+a {
+    color: $p1_textColor;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+input[type=color] {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+/*------------------------------------------------------------------
+3.0 - Icon
+------------------------------------------------------------------*/
+#iconContainer {
+    grid-area: iconContainer;
+
+    @include flex-center-xy;
+
+    background-color: $headerBar_bgColor;
+
+    img {
+        width: 20px;
+        height: auto;
+    }
+}
+
+
+/*------------------------------------------------------------------
+4.0 - Title Bar
+------------------------------------------------------------------*/
+#statusBar {
+    grid-area: statusBar;
+
+    @include flex-center-xy;
+
+    text-align: center;
+
+    background-color: $headerBar_bgColor;
+    color: $p2_textColor;
+    font-size: 14px;
+
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+/*------------------------------------------------------------------
+5.0 - Window Menu
+------------------------------------------------------------------*/
+#windowButtons {
+    grid-area: windowButtons;
+
+    display: flex;
+
+    background-color: $headerBar_bgColor;
+
+
+    .windowButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 auto;
+
+        border: none;
+        background: none;
+        color: $p2_textColor;
+
+        cursor: pointer;
+    }
+
+    #fullScreenButton {
+        font-size: 19px;
+    }
+
+    #fullScreenButton:hover,
+    #minimizeButton:hover {
+        background-color: $windowMenuItems_hoverBgColor;
+    }
+
+    #closeButton:hover {
+        background-color: rgb(212, 19, 36);
+        color: $p1_textColor;
+    }
+}
+
+
+/*------------------------------------------------------------------
+6.0 - Navigation Menu
+------------------------------------------------------------------*/
+nav {
+    grid-area: nav;
+    height: calc(100vh - #{$row_1});
+    background-color: $navigationMenu_bgColor;
+
+    .nav_item {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: none;
+        background: none;
+        color: rgb(84, 95, 98);
+        font-size: 20px;
+        cursor: pointer;
+
+        &.active {
+            color: $p2_hover_textColor;
+        }
+    }
+
+    .nav_item:hover {
+        color: $p2_hover_textColor;
+    }
+}
+
+
+/*------------------------------------------------------------------
+7.0 - Dynamic Content
+------------------------------------------------------------------*/
+#dynamicContent {
+    grid-area: main;
+
+    height: calc(100vh - #{$row_1});
+    padding: 30px 20px;
+    overflow: auto;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    #pageContent {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "pageTitle"
+            "content";
+
+    }
+
+    #actionPopup {
+        position: fixed;
+        top: $row_1;
+        right: 0;
+        transform: translateX(100%);
+        opacity: 0;
+        width: 250px;
+        max-width: 50%;
+        padding: 10px;
+        background-color: rgb(58, 68, 73);
+        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+        transition: all .2s ease-in-out;
+
+        &.showActionPopup {
+            transform: translateX(0px) !important;
+            opacity: 1 !important;
+        }
+
+        #popupTitle {
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #popupMessage {
+            font-size: 12px;
+            font-weight: normal;
+            color: whitesmoke;
+            margin-top: 8px;
+        }
+    }
+}

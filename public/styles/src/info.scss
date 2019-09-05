@@ -1,0 +1,46 @@
+/*------------------------------------------------------------------
+>>> TABLE OF CONTENTS
+--------------------------------------------------------------------
+1.0 - SCSS Variables
+2.0 - Info Page
+
+*/
+
+/*------------------------------------------------------------------
+1.0 - SCSS Variables
+------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+2.0 - Info Page
+------------------------------------------------------------------*/
+#infoContent {
+    grid-area: content;
+    max-height: 100%;
+
+    img {
+        margin: 10px 0px 0px 40px;
+    }
+
+    p {
+        color: #bbb;
+        margin: 5px 0px 5px 40px;
+        width: 80%;
+    }
+
+    .defaut_value {
+        margin-left: 50px;
+        color: rgb(175, 216, 121);
+    }
+
+    .h3_explanation {
+        margin-left: 30px;
+    }
+
+    .comment-italic {
+        color: grey;
+        font-size: 13px;
+        margin-left: 0px;
+        font-style: italic;
+    }
+}

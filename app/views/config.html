@@ -1,0 +1,93 @@
+<h1>Configuration</h1>
+
+<div id="screenshotSettings" class="settingsGroup">
+    <div id="settingsSide">
+        <h2>Screenshots</h2>
+
+        <div class="entryGroup">
+            <label for="screenshotFromCoordX">Screenshot from coord X <span class="comment">number</span></label>
+            <br>
+            <input type="text" id="screenshotFromCoordX" maxlength="4"><span class="comment">px</span>
+        </div>
+        <div class="entryGroup">
+            <label for="screenshotFromCoordY">Screenshot from coord Y <span class="comment">number</span></label>
+            <br>
+            <input type="text" id="screenshotFromCoordY" maxlength="4"><span class="comment">px</span>
+        </div>
+        <div class="entryGroup">
+            <label for="screenshotWidth">Screenshot width <span class="comment">number</span></label>
+            <br>
+            <input type="text" id="screenshotWidth" maxlength="4"><span class="comment">px</span>
+        </div>
+        <div class="entryGroup">
+            <label for="screenshotHeight">Screenshot height <span class="comment">number</span></label>
+            <br>
+            <input type="text" id="screenshotHeight" maxlength="4"><span class="comment">px</span>
+        </div>
+
+        <button class="secondaryButtons" id="checkScreenshotConfig">Check the screenshot settings</button>
+        <p id="checkScreenshotConfigDescription">
+            To have the correct screenshots settings, the image on the right musts only contain the text that appears when the person is online.
+        </p>
+    </div>
+    <div id="imgCheckSide">
+        <div id="imgCheckContainer">
+            <img src="" alt="" id="imgCheckScreenshot">
+        </div>
+    </div>
+</div>
+
+<div class="settingsGroup" id="normalSettings">
+    <h2>Settings</h2>
+
+    <div class="entryGroup">
+        <label for="dataDirectory">Data directory</label> <span class="comment">absolute path</span></label>
+        <br>
+        <input type="text" id="dataDirectory"> <button id="browseDirectories" class="secondaryButtons">Browse</button>
+        <p id="errIsNotDirectory"></p>
+    </div>
+    <div class="entryGroup">
+        <label for="saveImages">Save the screenshots <span class="comment">enabled | disabled</span></label>
+        <br>
+        <label class="switch">
+            <input type="checkbox" id="saveImages">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="entryGroup">
+        <label for="writeLog">Write status changes in log file <span class="comment">enabled | disabled</span></label>
+        <br>
+        <label class="switch">
+            <input type="checkbox" id="writeLog">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="entryGroup" id="resetLogFileEntry">
+        <label for="resetLogFile">Reset log file before starting a new spy session <span class="comment">enabled | disabled</span></label>
+        <br>
+        <label class="switch">
+            <input type="checkbox" id="resetLogFile">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="entryGroup">
+        <label for="sendNotificationWhenConnected">Send notifications when online <span class="comment">enabled | disabled</span></label>
+        <br>
+        <label class="switch">
+            <input type="checkbox" id="sendNotificationWhenConnected">
+            <span class="slider round"></span>
+        </label>
+    </div>
+</div>
+<div class="settingsGroup" id="advancedSettings">
+    <h2>Advanced settings</h2>
+
+    <div class="entryGroup">
+        <label for="colorSelector">Color to identify the text : </label><input type="color" id="colorSelector">
+    </div>
+</div>
+
+<div id="buttons">
+    <button class="primaryButtons" id="saveConfig">Save configuration</button>
+    <button class="primaryButtons" id="resetConfig">Reset to default settings</button>
+</div>

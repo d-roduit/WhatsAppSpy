@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsappSpy</title>
+    <link rel="stylesheet" data-href="index.css" data-folder="styles">
+    <link rel="stylesheet" data-href="font_awesome/css/fontawesome.min.css" data-folder="vendors">
+    <link rel="stylesheet" data-href="font_awesome/css/regular.min.css" data-folder="vendors">
+    <link rel="stylesheet" data-href="font_awesome/css/solid.min.css" data-folder="vendors">
+    <link rel="stylesheet" id="dynamicLink">
+</head>
+
+<body>
+    <div id="iconContainer">
+        <img data-src="icon/icon.png" data-folder="images" alt="WhatsAppSpy Icon">
+    </div>
+
+    <div id="statusBar">WhatsAppSpy</div>
+
+    <div id="windowButtons">
+        <button class="windowButton" id="minimizeButton">—</button>
+        <button class="windowButton" id="fullScreenButton">&#9723;</button>
+        <button class="windowButton" id="closeButton">&#10005;</button>
+    </div>
+
+    <nav>
+        <button class="nav_item" id="homeButton"><i class="fas fa-home"></i></button>
+        <button class="nav_item" id="settingsButton"><i class="fas fa-cogs"></i></button>
+        <button class="nav_item" id="infoButton"><i class="fas fa-info"></i></button>
+    </nav>
+
+    <main id="dynamicContent">
+        <div id="actionPopup">
+            <p id="popupTitle"></p>
+            <p id="popupMessage"></p>
+        </div>
+        <div id="pageContent"></div>
+    </main>
+
+    <script id="staticScript" data-src="index.js" data-folder="controllers"></script>
+    <script src="../../router.js"></script>
+    <script id="dynamicScript"></script>
+</body>
+
+</html>
