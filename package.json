@@ -15,7 +15,7 @@
     "license": "ISC",
     "devDependencies": {
         "cssnano": "^4.1.10",
-        "electron": "^5.0.7",
+        "electron": "^7.2.4",
         "electron-packager": "^14.0.4",
         "gulp": "^4.0.2",
         "gulp-postcss": "^8.0.0",
