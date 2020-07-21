@@ -1,12 +1,13 @@
 # What is WhatsAppSpy
 WhatsAppSpy is a cross-platform desktop application that allows you to spy on status changes of a WhatsApp contact.
 
+![WhatsAppSpy Home Presentation](/public/images/screenshot_example/home-presentation.jpg)
+
 # How to use
 
 ## 1. Download this program
 
-Download this program by clicking first on the green "Code" button and then on the "Download ZIP" button of the dropdown.
-![Download Steps Example](/public/images/screenshot_example/download-steps-example.png)
+Download this program by clicking first on the green "Code" button and then on the "Download ZIP" button of the dropdown. See the following example : ![Download Steps Example](/public/images/screenshot_example/download-step-example.png)
 
 Once the ZIP file has been downloaded, you can unzip it wherever you want on your computer (on the Desktop for example) to be able to start the program in the following step.
 
