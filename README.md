@@ -3,7 +3,25 @@ WhatsAppSpy is a cross-platform desktop application that allows you to spy on st
 
 # How to use
 
-## 1. Configure the settings
+## 1. Download this program
+
+Download this program by clicking first on the green "Code" button and then on the "Download ZIP" button of the dropdown.
+![Download Steps Example](/public/images/screenshot_example/download-steps-example.png)
+
+Once the ZIP file has been downloaded, you can unzip it wherever you want on your computer (on the Desktop for example) to be able to start the program in the following step.
+
+## 2. Start the program
+
+1. Open any terminal prompt (CMD, PowerShell, Terminal, Bash, ZSH, etc)
+2. In your terminal, move into the unzipped folder (maybe named `whatsappspy-master`) by executing the following command `cd path/to/folder/whatsappspy-master`.
+3. Execute the following command `npm install` to locally install all the necessary Node.js dependencies used by WhatsAppSpy.<br>:warning: This step requires [Node.js](https://nodejs.org/en/) and NPM (included in Node.js) to be installed on your machine.
+4. Start WhatsAppSpy by executing `npm run start` *(alias of `npm start electon .`)*.
+
+## 3. Configure the settings
+
+Once WhatsAppSpy is running, the last thing to do before spying on your friend is to configure the settings in order for the program to work properly.
+
+Configure the following settings :
 
 ### Screenshots settings
 
@@ -30,7 +48,7 @@ Default value: `10px`
 To have the correct size and location settings, you must only see the "online" status text of the person and the top-left corner of the image must start at the top-left corner of the first letter.
 
 The screenshot must be like the following one :
-![Screenshot Example](/public/images/screenshot_example/screenshot_example.jpg)
+![Online Status Example](/public/images/screenshot_example/online-status-example.png)
 
 ### Application settings
 
@@ -69,7 +87,7 @@ The greater the contrast between the status text color and its background, the m
 
 Default value: `'#7c7c7c'`
 
-## 2. Start spying
+## 4. Start spying
 You're all set to start spying on someone's connection ! :eyes:
 
 Go to the home page and start now ! :clap:
