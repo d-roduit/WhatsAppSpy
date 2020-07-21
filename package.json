@@ -23,7 +23,7 @@
         "gulp-sourcemaps": "^2.6.5"
     },
     "dependencies": {
-        "jimp": "^0.6.4",
+        "jimp": "^0.14.0",
         "screenshot-desktop": "^1.8.0"
     }
 }
