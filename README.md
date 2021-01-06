@@ -28,12 +28,12 @@ Configure the following settings :
 
 ### Screenshots settings
 
-| Setting | Description | Default value |
+| Setting | Description | Default&nbsp;value |
 | ------------- | ------------- | :---------: |
-| X coordinate | Sets the pixel on the horizontal axis from which the screenshot will be taken. | `null` |
-| Y coordinate | Sets the pixel on the vertical axis from which the screenshot will be taken. | `null` |
-| Screenshot width                               | The screenshot's width in pixel. | `10px` |
-| Screenshot height | The screenshot's height in pixel. | `10px` |
+| X&nbsp;coordinate | Sets the pixel on the horizontal axis from which the screenshot will be taken. | `null` |
+| Y&nbsp;coordinate | Sets the pixel on the vertical axis from which the screenshot will be taken. | `null` |
+| Screenshot&nbsp;width                               | The screenshot's width in pixel. | `10px` |
+| Screenshot&nbsp;height | The screenshot's height in pixel. | `10px` |
 
 To have the correct size and location settings, you must only see the "online" status text of the person and the top-left corner of the image must start at the top-left corner of the first letter.
 
