@@ -1,7 +1,7 @@
 # What is WhatsAppSpy
 WhatsAppSpy is a cross-platform desktop application that allows you to spy on status changes of a WhatsApp contact.
 
-![WhatsAppSpy Home Presentation](/public/images/screenshot_example/home-presentation.jpg)
+![WhatsAppSpy Home Presentation](/readme_images/home-presentation.jpg)
 
 # How to use
 
@@ -9,7 +9,7 @@ WhatsAppSpy is a cross-platform desktop application that allows you to spy on st
 
 Download this program by clicking first on the green "Code" button and then on the "Download ZIP" button of the dropdown. See the following example :
 
-![Download Steps Example](/public/images/screenshot_example/download-step-example.png)
+![Download Steps Example](/readme_images/download-step-example.png)
 
 Once the ZIP file has been downloaded, you can unzip it wherever you want on your computer (on the Desktop for example) to be able to start the program in the following step.
 
@@ -17,8 +17,8 @@ Once the ZIP file has been downloaded, you can unzip it wherever you want on you
 
 1. Open any terminal prompt (CMD, PowerShell, Terminal, Bash, ZSH, etc)
 2. In your terminal, move into the unzipped folder (maybe named `whatsappspy-master`) by executing the following command `cd path/to/folder/whatsappspy-master`.
-3. Execute the following command `npm install` to locally install all the necessary Node.js dependencies used by WhatsAppSpy.<br>:warning: This step requires [Node.js](https://nodejs.org/en/) and NPM (included in Node.js) to be installed on your machine.
-4. Start WhatsAppSpy by executing `npm run start` *(alias of `npm start electon .`)*.
+3. Execute the following command `npm install` to locally install all the necessary Node.js dependencies used by WhatsAppSpy.<br>:warning: This step requires [Node.js](https://nodejs.org/en/) and NPM (bundled with Node.js starting from version 5.2+) to be installed on your machine.
+4. Start WhatsAppSpy by executing `npm start`.
 
 ## 3. Configure the settings
 
