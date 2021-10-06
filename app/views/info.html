@@ -7,19 +7,19 @@
 
     <h4>X coordinate :</h4>
     <p>Sets the pixel on the horizontal axis from which the screenshot will be taken.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: null</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span id="default_value_screenshot_from_coord_x"></span>px</p>
 
     <h4>Y coordinate :</h4>
     <p>Sets the pixel on the vertical axis from which the screenshot will be taken.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: null</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span id="default_value_screenshot_from_coord_y"></span>px</p>
 
     <h4>Screenshot width :</h4>
     <p>The screenshot's width in pixel.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: 10px</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span id="default_value_screenshot_width"></span>px</p>
 
     <h4>Screenshot height :</h4>
     <p>The screenshot's height in pixel.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: 10px</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span id="default_value_screenshot_height"></span>px</p>
 
     <br>
 
@@ -31,15 +31,15 @@
 
     <h4>Data directory :</h4>
     <p>The absolute path of the directory where the screenshots <span class="comment-italic">(if enabled)</span> and the log file <span class="comment-italic">(if enabled)</span> are going to be saved.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: ' '</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: '<span id="default_value_data_directory"></span>'</p>
 
     <h4>Save the screenshots :</h4>
     <p>If enabled, the screenshots the application makes in order to find if a person is online will be saved in a subfolder called "screenshots" in the data directory specified.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: false</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span id="default_value_save_images"></span></p>
 
     <h4>Write status changes in log file :</h4>
     <p>If enabled, writes every new status change in a log.txt file.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: true</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span id="default_value_write_log"></span></p>
 
     <h4>Reset log file before starting a new spy session :</h4>
     <p>
@@ -47,26 +47,23 @@
         <br>
         The file will therefore contain only the log changes of the session started.
     </p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: false</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span id="default_value_reset_log_file"></span></p>
 
     <h4>Send notifications when online :</h4>
     <p>If enabled, the application will automatically push notifiation to your phone to alert you in real time of every new connection detected.</p>
     <p>This option requires a token, which one can be obtained by going to <a href="https://whatsappspy.droduit.ch">https://whatsappspy.droduit.ch</a>.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span class="value">false</span></p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: <span id="default_value_send_notification_when_connected" class="value"></span></p>
 
     <h3>Advanced settings</h3>
 
     <h4>Color to identify the text</h4>
     <p>Sets the pixel color which will be used to determine if there's text or not.</p>
     <p>The greater the contrast between the status text color and its background, the more reliable the detection will be every time.</p>
-    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: '#7c7c7c'</p>
+    <p class="defaut_value"><i class="fas fa-angle-right"></i> Default value: '<span id="default_value_color_to_search"></span>'</p>
 
     <h2>2. Start spying</h2>
     <p>You're all set to start spying on someone's connection ! 👏</p>
     <p>Go to the home page and start now ! 👀</p>
-
-    <br>
-    <br>
 
     <h2>Issues found ?</h2>
     <p>If something doesn't work or behave as you expected, let us know by reporting a new issue on <a href="https://github.com/d-roduit/whatsappspy">https://github.com/d-roduit/whatsappspy</a>.</p>
