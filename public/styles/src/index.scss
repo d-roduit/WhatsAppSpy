@@ -152,6 +152,7 @@ input[type=color] {
     color: $p2_textColor;
     font-size: 14px;
 
+    user-select: none;
     -webkit-user-select: none;
     -webkit-app-region: drag;
 }
@@ -201,7 +202,7 @@ input[type=color] {
 ------------------------------------------------------------------*/
 nav {
     grid-area: nav;
-    height: calc(100vh - #{$row_1});
+
     background-color: $navigationMenu_bgColor;
 
     .nav_item {
@@ -234,25 +235,10 @@ nav {
 #dynamicContent {
     grid-area: main;
 
-    height: calc(100vh - #{$row_1});
     padding: 30px 20px;
     overflow: auto;
 
     position: relative;
-
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-
-    #pageContent {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto 1fr;
-        grid-template-areas:
-            "pageTitle"
-            "content";
-
-    }
 
     #actionPopup {
         position: fixed;

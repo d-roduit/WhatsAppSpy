@@ -21,8 +21,6 @@ $logPreviewContainerHeight: 190px;
 2.0 - Home Page
 ------------------------------------------------------------------*/
 #homeContent {
-    grid-area: content;
-
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 150px 120px $logPreviewContainerHeight 0px;
