@@ -1,10 +1,10 @@
 // Default config object
 const defaultConfig = {
     screenshots: {
-        from_coord_x: null,
-        from_coord_y: null,
-        width: null,
-        height: null
+        from_coord_x: 0,
+        from_coord_y: 0,
+        width: 70,
+        height: 20
     },
     settings: {
         data_directory: `${routes.appData}data${path.sep}`,
