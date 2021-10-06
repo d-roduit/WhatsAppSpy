@@ -85,8 +85,6 @@ generateAbsoluteRoutes(routes, pageContentElem);
 
             const defaultConfig = require(`${routes.root}defaultConfig`);
 
-            console.log(defaultConfig);
-
             // Update the view with the default config
             applyConfig(defaultConfig);
 
@@ -294,8 +292,10 @@ generateAbsoluteRoutes(routes, pageContentElem);
         ipcRenderer.send('dialog:open', dataDirectoryInput.value);
     });
 
-    ipcRenderer.on('dialog:returnedPath', (event, arg) => {
-        dataDirectoryInput.value = arg;
+    ipcRenderer.on('dialog:returnedPath', (event, returnedPath) => {
+        if (returnedPath != undefined) {
+            dataDirectoryInput.value = returnedPath;
+        }
     });
 
 })();

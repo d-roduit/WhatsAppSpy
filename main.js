@@ -106,8 +106,12 @@ ipcMain.on('dialog:open', (event, arg) => {
         defaultPath: arg,
         properties: ['openDirectory'],
         createDirectory: true
-    }, (directoryPath) => {
-        event.reply('dialog:returnedPath', `${directoryPath}${path.sep}`);
+    }).then(result => {
+        if (!result.canceled) {
+            event.reply('dialog:returnedPath', `${result.filePaths[0]}${path.sep}`);
+        }
+    }).catch(err => {
+        console.log(err);
     });
 });
 
