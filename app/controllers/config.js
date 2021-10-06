@@ -281,8 +281,6 @@ generateAbsoluteRoutes(routes, pageContentElem);
             .catch(err => {
                 console.log(`Screenshot : ${err}`)
             });
-
-        // imgCheckScreenshotElem.src = 'data:image/jpeg;base64,' + buf.toString('base64');
     });
 
     writeLogInput.addEventListener('change', function() {
