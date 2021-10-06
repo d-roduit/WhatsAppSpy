@@ -15,10 +15,7 @@ async function compileAndWatchSass() {
 	exec(`npx sass ${paths.styles.src}:${paths.styles.dist} --watch --style=compressed --source-map`);
 }
 
-exports.compileSass = compileSass;
-exports.compileAndWatchSass = compileAndWatchSass;
-
-// exports = {
-// 	compileSass,
-// 	compileAndWatchSass
-// }
+module.exports = {
+	compileSass,
+	compileAndWatchSass
+}
