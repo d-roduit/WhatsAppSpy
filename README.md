@@ -48,7 +48,7 @@ The screenshot must be like the following one :
 | Save&nbsp;the&nbsp;screenshots | If enabled, the screenshots the application makes in order to find if a person is online will be saved in a subfolder called "screenshots" in the data directory specified. | `false` |
 | Write&nbsp;status&nbsp;changes&nbsp;in&nbsp;log&nbsp;file | If enabled, writes every new status change in a `log.txt` file. | `true` |
 | Reset&nbsp;log&nbsp;file&nbsp;before&nbsp;starting&nbsp;a&nbsp;new&nbsp;spy&nbsp;session | If enabled, clears the log file content before every new spy session. | `false` |
-| Send&nbsp;notifications&nbsp;when&nbsp;online | If enabled, the application will automatically push notifiation to your phone to alert you in real time of every new connection detected. This option requires a token, which one can be obtained by going to [droduit.ch](https://droduit.ch/). | `false` |
+| Send&nbsp;notifications&nbsp;when&nbsp;online | If enabled, the application will automatically push notifiation to your phone to alert you in real time of every new connection detected. This option requires a token, which one can be obtained by going to [https://whatsappspy.droduit.ch](https://whatsappspy.droduit.ch/). | `false` |
 | Write&nbsp;status&nbsp;changes&nbsp;in&nbsp;log&nbsp;file | If enabled, writes every new status change in a log.txt file. | `true` |
 
 ### Advanced settings
