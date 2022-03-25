@@ -16,7 +16,7 @@
     "author": "Daniel Roduit",
     "license": "ISC",
     "devDependencies": {
-        "electron": "^11.5.0",
+        "electron": "^13.6.6",
         "electron-packager": "^15.4.0",
         "run-func": "^1.0.5",
         "sass": "^1.42.1"
