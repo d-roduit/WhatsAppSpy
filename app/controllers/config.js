@@ -158,10 +158,9 @@ generateAbsoluteRoutes(routes, pageContentElem);
     // Get the user config from settings.json
     let userConfig = {};
     try {
-        console.log('getConfig tried');
         userConfig = getConfig();
     } catch (err) {
-        console.log(`${err}`);
+        console.error(err);
         resetConfig();
         userConfig = getConfig();
     }
@@ -273,11 +272,11 @@ generateAbsoluteRoutes(routes, pageContentElem);
                             });
                     })
                     .catch(err => {
-                        console.log(`Jimp : ${err}`)
+                        console.error(`Jimp : ${err}`)
                     });
             })
             .catch(err => {
-                console.log(`Screenshot : ${err}`)
+                console.error(`Screenshot : ${err}`)
             });
     });
 

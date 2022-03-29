@@ -98,7 +98,7 @@ const getConfig = () => {
     try {
         rawdata = fs.readFileSync(`${routes.appData}settings.json`);
     } catch (err) {
-        console.log(err);
+        console.error(err);
 
         // Create settings.json file with default json config
         fs.writeFileSync(`${routes.appData}settings.json`, jsonData);
@@ -113,7 +113,7 @@ const getConfig = () => {
     try {
         data = JSON.parse(rawdata);
     } catch (err) {
-        console.log(err);
+        console.error(err);
 
          // Replaces the settings.json content file with empty json
          fs.writeFileSync(`${routes.appData}settings.json`, jsonData);

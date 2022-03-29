@@ -13,7 +13,8 @@ let createWindow = () => {
         minWidth: 200,
         center: true,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            contextIsolation: false
         },
         backgroundColor: '#273136',
         icon: `${routes.images}icon/icon.png`,
@@ -111,7 +112,7 @@ ipcMain.on('dialog:open', (event, arg) => {
             event.reply('dialog:returnedPath', `${result.filePaths[0]}${path.sep}`);
         }
     }).catch(err => {
-        console.log(err);
+        console.error(err);
     });
 });
 

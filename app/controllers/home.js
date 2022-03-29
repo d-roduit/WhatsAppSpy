@@ -28,10 +28,9 @@ loadView('home');
         try {
             fs.appendFile(logFile.savingPath, text, (err) => {
                 if (err) throw err;
-                // console.log('File updated');
             });
         } catch (err) {
-            console.log(`LogFile Writing: ${err}`);
+            console.error(`LogFile Writing: ${err}`);
         }
     };
 
@@ -212,8 +211,6 @@ loadView('home');
             // Takes a screenshot
             ScreenshotLib()
                 .then(imgFromBuffer => {
-                    console.log('Screenshot : screenshot taken');
-
                     Jimp.read(imgFromBuffer)
                         .then(img => {
                             let imgLeft = img.clone();
@@ -309,12 +306,8 @@ loadView('home');
                                 status = 'text detection found no result';
                             }
 
-                            // If the status hasn't changed
-                            if (status === lastStatus) {
-                                console.log('status === lastStatus');
-
                             // If the status has changed from the previous one
-                            } else {
+                            if (status !== lastStatus) {
                                 if (status === 'online') {
                                     // Updates the connection informations
                                     updateConnectionsInfo(++connectionsCounter, currentTime);
@@ -334,7 +327,7 @@ loadView('home');
                             }
                         })
                         .catch(err => {
-                            console.log(`Jimp : ${err}`)
+                            console.error(`Jimp : ${err}`)
                             showActionPopup('Spy Error', `${icons.exclamation_circle} Jimp : ${err}`);
                             clearInterval(spyCycle);
                             toggleIsScriptRunning();
@@ -357,7 +350,7 @@ loadView('home');
                         });
                 })
                 .catch(err => {
-                    console.log(`Screenshot : ${err}`)
+                    console.error(`Screenshot : ${err}`)
                     showActionPopup('Spy Error', `${icons.exclamation_circle} Screenshot : ${err}`);
                     clearInterval(spyCycle);
                     toggleIsScriptRunning();
@@ -396,25 +389,15 @@ loadView('home');
     // Displays the logHistory in logPreviewElem
     showLogHistory();
 
-    /*    */
     const htmlEl = document.getElementById('logPreview');
-    console.log(htmlEl);
     if (htmlEl) {
         const isScrolledToBottom = ((htmlEl.scrollHeight - htmlEl.clientHeight) <= (htmlEl.scrollTop + 1)) ? true : false;
 
-        console.log(`htmlEl.scrollHeight: ${htmlEl.scrollHeight}`);
-        console.log(`htmlEl.clientHeight: ${htmlEl.clientHeight}`);
-        console.log(`htmlEl.scrollTop + 1: ${htmlEl.scrollTop + 1}`);
-
-        console.log(`isScrolledToBottom: ${isScrolledToBottom}`);
         if (!isScrolledToBottom) {
             // Scrolls to bottom
             htmlEl.scrollTop = htmlEl.scrollHeight - htmlEl.clientHeight;
         }
-    } else {
-        console.log('element htmlEl not present');
     }
-    /*    */
 
     // Displays the updated connections informations
     updateConnectionsInfo(connectionsCounter, lastConnectionTime);
@@ -444,7 +427,6 @@ loadView('home');
             // Resets the lastStatus in order to begin with an empty variable on the next spying session
             lastStatus = null;
 
-            console.log('interval cleared');
             removeFromLogHistory('.animated_waiter');
 
             // Gets the script ending time
