@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-    <strong>A cross-platform desktop application that allows you to spy on status changes of a WhatsApp contact</strong>
+    <strong>A cross-platform desktop application that allows you to spy on status changes of a WhatsApp contact 👀</strong>
 </p>
 
 </div>
