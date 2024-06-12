@@ -23,6 +23,6 @@
     },
     "dependencies": {
         "jimp": "^0.22.2",
-        "screenshot-desktop": "^1.12.7"
+        "screenshot-desktop": "^1.15.0"
     }
 }
