@@ -9,15 +9,15 @@
         "postinstall": "run-func sassCompiling.js compileSass",
         "build-dev": "run-func sassCompiling.js compileAndWatchSass",
         "start": "electron .",
-        "package-mac": "npm run postinstall && electron-packager . --overwrite --platform=darwin --arch=x64 --icon=./public/images/icon/mac/icon.icns --prune=true --out=release-builds",
-        "package-win": "npm run postinstall && electron-packager . WhatsAppSpy --overwrite --platform=win32 --arch=ia32 --icon=./public/images/icon/win/icon.ico --prune=true --out=build --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"WhatsAppSpy\"",
-        "package-linux": "npm run postinstall && electron-packager . WhatsAppSpy --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+        "package-mac": "npm run postinstall && npx @electron/packager . --overwrite --platform=darwin --arch=x64 --icon=./public/images/icon/mac/icon.icns --prune=true --out=release-builds",
+        "package-win": "npm run postinstall && npx @electron/packager . WhatsAppSpy --overwrite --platform=win32 --arch=ia32 --icon=./public/images/icon/win/icon.ico --prune=true --out=build --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"WhatsAppSpy\"",
+        "package-linux": "npm run postinstall && npx @electron/packager . WhatsAppSpy --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
     },
     "author": "Daniel Roduit",
     "license": "ISC",
     "devDependencies": {
+        "@electron/packager": "^18.3.2",
         "electron": "^22.3.25",
-        "electron-packager": "^17.1.1",
         "run-func": "^3.0.0",
         "sass": "^1.77.5"
     },
