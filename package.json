@@ -19,7 +19,7 @@
         "electron": "^22.3.25",
         "electron-packager": "^17.1.1",
         "run-func": "^3.0.0",
-        "sass": "^1.53.0"
+        "sass": "^1.77.5"
     },
     "dependencies": {
         "jimp": "^0.22.2",
